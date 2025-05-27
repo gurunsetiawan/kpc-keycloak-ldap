@@ -52,10 +52,19 @@ helm repo update
 
 ### 3. Deploy OpenLDAP
 
+⚠️ Pastikan Anda menggunakan versi chart yang tersedia. Gunakan perintah berikut untuk memeriksa versi yang tersedia:
+
+```bash
+helm search repo bitnami/openldap
+```
+Kemudian install dengan versi yang cocok, misalnya:
+```bash
+helm install openldap bitnami/openldap -f openldap-values.yaml --version 12.1.0
+```
+Jika Anda tidak tahu versinya, cukup jalankan:
 ```bash
 helm install openldap bitnami/openldap -f openldap-values.yaml
 ```
-
 ### 4. Create ConfigMap for Realm
 
 ```bash
