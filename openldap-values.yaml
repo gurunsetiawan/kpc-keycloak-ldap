@@ -1,0 +1,8 @@
+auth:
+  ldapAdminPassword: admin123
+  ldapUsers:
+    - user1
+  ldapPasswords:
+    - password1
+service:
+  ldapPort: 1389

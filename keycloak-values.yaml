@@ -1,0 +1,19 @@
+auth:
+  adminUser: admin
+  adminPassword: admin
+
+service:
+  type: ClusterIP
+
+extraEnvVars:
+  - name: KEYCLOAK_IMPORT
+    value: "true"
+
+extraVolumeMounts:
+  - name: realm-volume
+    mountPath: /opt/bitnami/keycloak/data/import
+
+extraVolumes:
+  - name: realm-volume
+    configMap:
+      name: keycloak-realm
