@@ -50,7 +50,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 ```
 
-### Deploy OpenLDAP (via Community Chart)
+### 3. Deploy OpenLDAP (via Community Chart)
 Because Bitnami no longer provides the openldap chart in their Helm repo, use the community-maintained chart instead:
 ```bash
 git clone https://github.com/johanneskastl/openldap-bitnami-helm-chart.git
