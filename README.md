@@ -29,6 +29,7 @@ kpc-keycloak-ldap/
 
 ### 1. Create K3d Cluster
 
+bash
 ```bash
 k3d cluster create keycloak-cluster \
   --agents 2 \
@@ -37,6 +38,7 @@ k3d cluster create keycloak-cluster \
   --wait
 ```
 
+powershell
 ```powershell
 k3d cluster create keycloak-cluster --agents 2 --port "8080:80@loadbalancer" --port "1389:1389@loadbalancer" --wait
 ```
