@@ -50,21 +50,15 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 ```
 
-### 3. Deploy OpenLDAP
+### Deploy OpenLDAP (via Community Chart)
+Because Bitnami no longer provides the openldap chart in their Helm repo, use the community-maintained chart instead:
+```bash
+git clone https://github.com/johanneskastl/openldap-bitnami-helm-chart.git
+cd openldap-bitnami-helm-chart/charts/openldap-bitnami
+helm install openldap . -f /path/to/kpc-keycloak-ldap/openldap-values.yaml
+```
+⚠️ Gantilah /path/to/kpc-keycloak-ldap/openldap-values.yaml sesuai dengan path ke file Anda.
 
-⚠️ Pastikan Anda menggunakan versi chart yang tersedia. Gunakan perintah berikut untuk memeriksa versi yang tersedia:
-
-```bash
-helm search repo bitnami/openldap
-```
-Kemudian install dengan versi yang cocok, misalnya:
-```bash
-helm install openldap bitnami/openldap -f openldap-values.yaml --version 12.1.0
-```
-Jika Anda tidak tahu versinya, cukup jalankan:
-```bash
-helm install openldap bitnami/openldap -f openldap-values.yaml
-```
 ### 4. Create ConfigMap for Realm
 
 ```bash
