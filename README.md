@@ -37,6 +37,10 @@ k3d cluster create keycloak-cluster \
   --wait
 ```
 
+```powershell
+k3d cluster create keycloak-cluster --agents 2 --port "8080:80@loadbalancer" --port "1389:1389@loadbalancer" --wait
+```
+
 ### 2. Add Bitnami Helm Repo
 
 ```bash
