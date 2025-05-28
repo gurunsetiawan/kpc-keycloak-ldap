@@ -1,7 +1,7 @@
 # Keycloak + OpenLDAP on Kubernetes (K3d) using Helm
 
 This repository contains a ready-to-deploy configuration for running **Keycloak integrated with OpenLDAP** on a lightweight **K3d Kubernetes cluster**. It uses **Bitnami Helm Charts** and supports **automatic realm import**.
-
+For learning purpose
 ---
 
 ## 📁 Project Structure
